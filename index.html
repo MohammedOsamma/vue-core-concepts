@@ -19,13 +19,10 @@
     <section id="styling">
       <!-- We Can Add Classes Dynamiclly with 3 Ways  -->
       <!-- First Way  -->
-      <div
-        :class="boxASelected ? 'demo active ' : 'demo' "
-        @click="boxSelected('A')"
-      ></div>
+      <div class="demo" :class="BoxASelected" @click="boxSelected('A')"></div>
       <!-- Second Way -->
       <div
-        :class="{demo :true , active:boxBSelected}"
+        :class="['demo ', { active:boxBSelected}]"
         @click="boxSelected('B')"
       ></div>
       <!-- Third Way  -->
