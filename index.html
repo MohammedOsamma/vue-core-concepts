@@ -17,19 +17,21 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
+      <!-- We Can Add Classes Dynamiclly with 3 Ways  -->
+      <!-- First Way  -->
       <div
-        class="demo"
-        :style="{borderColor: boxASelected ? 'red' : '#ccc'}"
+        :class="boxASelected ? 'demo active ' : 'demo' "
         @click="boxSelected('A')"
       ></div>
+      <!-- Second Way -->
       <div
-        class="demo"
-        :style="{borderColor: boxBSelected ? 'red' : '#ccc'}"
+        :class="{demo :true , active:boxBSelected}"
         @click="boxSelected('B')"
       ></div>
+      <!-- Third Way  -->
       <div
         class="demo"
-        :style="{borderColor: boxCSelected ? 'red' : '#ccc'}"
+        :class="{active : boxCSelected}"
         @click="boxSelected('C')"
       ></div>
     </section>
